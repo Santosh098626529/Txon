@@ -1,0 +1,219 @@
+/*
+GOOGLE FONT
+*/
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
+
+/* 
+Variables
+*/
+
+:root {
+    --color-primary: #BF00FF;
+    /* darkest grey - used for headings */
+    --color-grey-1: hsl(209, 61%, 16%);
+    --color-grey-2: hsl(211, 39%, 23%);
+    --color-grey-3: hsl(209, 34%, 30%);
+    --color-grey-4: hsl(209, 28%, 39%);
+    /* grey used for paragraphs */
+    --color-grey-5: hsl(210, 22%, 49%);
+    --color-grey-6: hsl(209, 23%, 60%);
+    --color-grey-7: hsl(211, 27%, 70%);
+    --color-grey-8: hsl(210, 31%, 80%);
+    --color-grey-9: hsl(212, 33%, 89%);
+    --color-grey-10: hsl(210, 36%, 96%);
+    --color-white: #fff;
+    --color-black: #222;
+    --font-primary: "Lato", sans-serif;
+    --transition: all 0.3s linear;
+    --spacing: 0.25rem;
+    --radius: 0.5rem;
+    --max-width: 1170px;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/*
+   GLOBAL STYLES, FASTER DEVELOPMENT, THIS IS REUSABLE CODE
+    THIS GLOBAL STYLES ARE OVERRIDED IF NEEDED
+*/
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    background: var(--color-grey-8);
+    color: var(--color-grey-1);
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    letter-spacing: var(--spacing);
+    text-transform: capitalize;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-size: 0.875rem;
+}
+
+p {
+    margin-bottom: 1.25rem;
+    color: black;
+}
+
+@media screen and (min-width: 800px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    body {
+        font-size: 1rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        line-height: 1;
+    }
+}
+
+
+/* Todo-app Styling Starts */
+main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.app {
+    margin-top: 4rem;
+    width: 95%;
+    max-width: 500px;
+}
+.app-title {
+    background-color: var(--color-primary);
+    height: 40px;
+    display: grid;
+    place-items: center;
+}
+.app-title pre {
+    color: var(--color-white);
+    font-family: var(--font-primary);
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+form {
+    display: flex;
+}
+input {
+    width: 90%;
+    padding: 0.5rem;
+    border: 3px solid var(--color-primary);
+    font-size: 1rem;
+}
+input:focus {
+    outline: none;
+}
+button {
+    width: 10%;
+    border: 3px solid var(--color-primary);
+    font-size: 2rem;
+    color: var(--color-primary);
+    font-weight: bolder;
+    background-color: white;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+.app-divider {
+    background-color: var(--color-grey-8);
+    height: 25px;
+}
+.app-body-there {
+    padding: 2rem;
+    padding-bottom: 1rem;
+    background-color: var(--color-white);
+}
+li {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    letter-spacing: 1px;
+}
+.todo-done {
+    text-decoration: line-through;
+}
+.circle {
+    margin-right: 10px;
+    transition: var(--transition);
+}
+.circle:hover {
+    color: green;
+}
+.done-circle {
+    color: green;
+    margin-right: 10px;
+}
+.del {
+    margin-left: 4px;
+    color: var(--color-primary);
+    transition: var(--transition);
+}
+.del:hover {
+    color: tomato;
+}
+/* Todo-app Styling Ends */
